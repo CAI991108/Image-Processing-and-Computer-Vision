@@ -1,0 +1,33 @@
+# config.yaml
+
+# Data parameters
+data:
+  data_root: "/path/to/EG1800"
+  train_path: "/path/to/train_data"
+  val_path: "/path/to/val_data"
+  input_size: [224, 224]  # [height, width]
+  batch_size: 256
+
+# Model parameters
+model:
+  name: "PortraitNet"
+
+# Training parameters
+training:
+  epochs: 200
+  lr: 1e-4  # learning rate
+
+# Loss function
+loss:
+  name: 'FocalLoss'
+
+# Optimizer
+optimizer:
+  name: "Adam"
+
+# Output
+output:
+  checkpoint_dir: "/path/to/checkpoints"
+
+# Hardware
+device: "cuda"
